@@ -1,0 +1,4 @@
+Upload up to 20 JPEG photos here, named 01.jpg, 02.jpg, ... 20.jpg.
+The first photograph (01.jpg) appears as the hero photo.
+If you have PNG or HEIC images, convert them to JPG first, or edit PHOTO_FILES in app.js.
+Photos become publicly accessible after publication.
