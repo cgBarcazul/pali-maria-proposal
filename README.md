@@ -6,14 +6,11 @@ An elegant, mobile-friendly photo website for **Pali and Maria**. It is complete
 
 ### 1. Add the proposal photos
 
-1. Open this project's `photos/` folder.
-2. Rename your favorite proposal photo **`01.jpg`** (it becomes the large photo at the top).
-3. Rename the other photos **`02.jpg`** through **`20.jpg`**.
-4. Put all 20 files inside `photos/`.
+Upload your JPG photographs into the `photos/` folder. **Keep original camera filenames** such as `DSCF4774.jpg`, `DSCF4777.jpg`, and `DSCF4778.jpg` — renaming is not necessary. The site automatically discovers image files in this folder via GitHub's public repository API and shows them in filename order. It currently includes a saved list of 28 uploaded photographs as an offline fallback.
 
-**Important:** The file names must match exactly, including `.jpg`, in lowercase. If your pictures are HEIC, PNG, or WEBP, convert them to JPG first, **or** edit the `PHOTO_FILES` list at the beginning of `app.js` to match their names and extensions. You can also change the number of pictures there.
+The first filename in order is used for the main featured image. If you prefer a specific cover, edit the cover selection in `app.js`. Photos can be JPG, JPEG, PNG, WEBP or AVIF. As you upload more images, they appear automatically after the public repository API updates.
 
-Before uploading, consider resizing images to approximately **1600–2400 px on the long edge** at JPEG quality 80–85 to make loading faster. Keep personal backups of the original full-resolution images: GitHub Pages is a display site, not your only backup.
+For faster loading, consider resizing images to 1600–2400 px on the long edge (JPEG quality 80–85), but keep a separate backup of original high-resolution files. GitHub Pages is a display site, not your only backup.
 
 ### 2. Publish for free with GitHub Pages
 
@@ -40,7 +37,7 @@ Open `index.html` in any text editor. You can change the headline, messages, or 
 ## Features
 
 - Responsive layout (phone, tablet, desktop)
-- 20 photo slots; no broken-image icons when photos aren't uploaded yet
+- Automatically discovers camera-named photographs and updates the gallery count
 - Full-screen viewer with previous/next buttons and keyboard arrow navigation
 - One-tap individual photo downloads
 - No tracking scripts, third-party JavaScript, external fonts, or build tools
@@ -55,23 +52,18 @@ GitHub Pages is free for a project of this size. GitHub's published Pages site s
 ## Files
 
 ```text
-pali-maria-proposal-site/
-├── index.html                Website layout & words
-├── styles.css                Colors, typography & responsive layout
-├── app.js                    Photo filenames & lightbox logic
-├── assets/
-│   ├── favicon.svg           Browser icon
-│   └── share-card.svg        Sharing graphic
+pali-maria-proposal/
+├── index.html           Website layout and text
+├── styles.css           Colors and responsive layout
+├── app.js               Gallery and automatic photo discovery
+├── assets/               Icons and sharing graphic
 ├── photos/
-│   ├── 01.jpg                Add these image files yourself
-│   ├── 02.jpg
-│   ├── ...
-│   └── 20.jpg
-├── .nojekyll                 Prevents GitHub Pages from running Jekyll
-└── README.md                 These instructions
+│   ├── DSCF4774.jpg     Your original camera photos
+│   ├── DSCF4777.jpg
+│   └── ...              Add more without renaming
+├── .nojekyll
+└── README.md
 ```
-
-The `photos/` directory in the starter ZIP contains an instruction text file and a hidden `.gitkeep` file; it has **no photos yet**.
 
 ## Test on your computer
 
